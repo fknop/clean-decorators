@@ -11,6 +11,10 @@ of the cleanup. Nothing will happen.
 npm install clean-decorators 
 ```
 
+## About `reflect-metadata`
+
+The library has a dependency on `reflect-metadata` but does not import it. You need to import it yourself.
+
 ## @Cleanable()
 
 `@Cleanable` defines a cleanable property.
