@@ -4,6 +4,7 @@
   "description": "Decorators to clean up observable subscriptions",
   "main": "index.js",
   "scripts": {
+    "prepublish": "npm run tsc",
     "tsc": "node_modules/.bin/tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
