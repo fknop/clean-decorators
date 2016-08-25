@@ -53,7 +53,7 @@ class MyClass {
     this.myProperty2 = /* observable2.subscribe(() => {}) */
   }
 
-  @Clean({ id: 'b' })
+  @Clean({ id: 'a' })
   cleanA () {
     // Now myProperty is unsubscribed
   }
