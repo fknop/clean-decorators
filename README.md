@@ -5,6 +5,12 @@
 It takes any property that has a `unsubscribe` method. If the property is undefined/null or has no `unsubscribe` method at the time 
 of the cleanup. Nothing will happen.
 
+## Install
+
+```
+npm install clean-decorators 
+```
+
 ## @Cleanable()
 
 `@Cleanable` defines a cleanable property.
