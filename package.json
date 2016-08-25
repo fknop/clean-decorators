@@ -1,6 +1,6 @@
 {
   "name": "clean-decorators",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Decorators to clean up observable subscriptions",
   "main": "index.js",
   "scripts": {
