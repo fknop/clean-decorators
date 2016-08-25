@@ -38,7 +38,6 @@ export function Clean (options: CleanMetadata = { id: '', before: true }) {
       }
 
       const metadata = Reflect.getOwnMetadata(`__cleanable__subscriptions__${options.id}`, target);
-      console.log(metadata);
       if (metadata) {
         metadata.forEach((property: string) => {
           if (property && this[property] && this[property].unsubscribe) {
