@@ -40,8 +40,21 @@ export function Clean (options: CleanMetadata = { id: '', before: true }) {
       const metadata = Reflect.getOwnMetadata(`__cleanable__subscriptions__${options.id}`, target);
       if (metadata) {
         metadata.forEach((property: string) => {
-          if (property && this[property] && this[property].unsubscribe) {
-            this[property].unsubscribe();
+          if (property && this[property]) {
+
+            if (this[property].unsubscribe) {
+              this[property].unsubscribe();
+            }
+            else if (Array.isArray(this[property])) {
+
+              // Handle array of subscriptions
+              (<any[]>this[property]).forEach((x) => {
+                if (x.unsubscribe) {
+                  x.unsubscribe();
+                }
+              });
+            }
+
           }
         });
       }
